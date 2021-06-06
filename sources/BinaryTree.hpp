@@ -50,7 +50,7 @@ namespace ariel
             return *this;
         }
 
-        BinaryTree<T> add_root(T val)
+        BinaryTree<T>& add_root(T val)
         {
             if (root == nullptr)
             {
@@ -63,7 +63,7 @@ namespace ariel
             return *this;
         }
 
-        BinaryTree<T> add_left(T parent, T left_child)
+        BinaryTree<T>& add_left(T parent, T left_child)
         {
             Node *add_new_child = find_parent(parent);
             if (add_new_child == nullptr)
@@ -82,7 +82,7 @@ namespace ariel
             return *this;
         }
 
-        BinaryTree<T> add_right(T parent, const T right_child)
+        BinaryTree<T>& add_right(T parent, const T right_child)
         {
             Node *add_new_child = find_parent(parent);
             if (add_new_child == nullptr)
